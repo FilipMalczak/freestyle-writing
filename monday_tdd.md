@@ -27,7 +27,7 @@ how it can go down from there:
 
 1. Someone erased the whiteboard over the weekend. In that case you have much 
   worse problem than the ones I'm trying to help solve with that piece of text.
-  You can be pretty much sure, that if the feature was going to be ready before
+  You can be pretty much sure that if the feature was going to be ready before
   now, it will definitely need some work.
 
 2. Whiteboard agrees with one of the guys. For the sake of example, let's say 
@@ -50,3 +50,32 @@ how it can go down from there:
   > **Ben:** Huh, that's unexpected. We need to work on our workflow. Anyway, this
     API is already consumed by a bunch of other services, I can't change it 
     without talking to a dozen people.
+  One way or the other, there will be a problem and a delay. Both sides thought
+  that they have their work finished, and yet one of them still have the stuff to
+  do.
+
+# What happened?
+
+A lot of things may have happened. There may have been a mischief (easy to do
+when your golden source of truth can be deleted with a sponge). There may have
+been a brainfart. There may have been a confusion. There may have been simple
+laziness.
+
+> Wait, was that 1 or 2 fields? It's written on the whiteboard... But
+> my chair is sooooooo comfy...
+
+What really happened is that someone missed something. There was something of
+an agreement, but it wasn't really persisted. I mean, is whiteboard really persistent?
+It was easy to make a mistake. Checking required effort. Making change was 
+transparently and anonymously possible.
+
+Who missed it? A bunch of people. Authors of code. Code reviewers. Tech lead 
+(who's responsibility is to take blame on his people's mistakes).  Colleagues 
+present on SCRUM standup (who could have caught the issue or asked about details
+that would allow it). SCRUM master (who's supposed to moderate level of details
+given by team members. Who knows? In the end, all that matters is that the team
+won't deliver the feature as soon as they could. Why? Because of a nuissance...
+
+**Insert Piccard facepalm here**
+
+
