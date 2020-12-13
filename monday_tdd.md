@@ -181,4 +181,32 @@ review that will be negative. In other words, since we've made (reasonably) sure
 that if someone makes a mistake about the agreement then it will be caught during 
 the review. 
 
-... testing save
+The issue here is quite deep. 
+
+Imagine that you just stepped out of the room, where you've spend the last 15 
+minutes (and let's be frank, usually it's closer to an hour or so; still, let's
+use the short time period to underline the scale here) arguing on the way you want
+something to be shaped. If a feature is easy, then all sub-teams (backend, 
+frontend, design, what have you) will be on the same page and that's not the case
+we're trying to cover here.
+
+If you didn't see eye-to-eye then you probably just tried to defend your idea
+of "last name and first name versus just name" argument. 
+
+Now, maybe you just "won" and you're going on to write that down since it's nice 
+and fresh and along your approach. That will give you nice basis for next few 
+hours of work, maybe today, maybe tomorrow, but still - you'll probably remember 
+the actual agreement.
+
+But maybe you were on the fence? It sorta landed on your side, but you're still
+not 100% sure. The next day you come to work and try to remember what you agreed
+on. There's a pretty big chance (sorry, no numbers; I know that by heart, by my
+own and people that I've worked with behaviour) **todo shitty phrasing; is the () 
+necessary at all?** that you've been working the alternative idea in your head
+and while you're still morning-fuzzy you'll assume that the other side "won".
+
+Or maybe you're on the other side, you just "lost". You may be on the fence, but
+that's easier - you've been at least somehow convinced that the other side had 
+better idea, so that's imprinted on you.
+
+...
