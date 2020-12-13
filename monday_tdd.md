@@ -1,4 +1,4 @@
-# TDD and Monday walk into a bar.
+# TDD practice and a Monday morning walk into a bar...
 
 Before we start - I'm a backend dev, I had my share of SCRUM mastering and tech
 leading. Here I try to show a scenario that may happen in a software house or
@@ -216,7 +216,7 @@ if you had more time or better convincing tools (like proof, that requires work 
 you would have been right?
 
 That's another case where your inner instinct says something else than the decision
-that was made. In a similar way as in case of a "winner" that was sort of convinced,
+that was made. In a similar wayTDD practice and a Monday walks into a bar as in case of a "winner" that was sort of convinced,
 we tend to write down stuff we're subconciously **todo spellcheck*** focuesd on.
 Do you know that practical joke, where when someone spends a lot of time texting 
 around you, you just repeat a word like "giraffe" and he ends up with texting something
@@ -230,4 +230,59 @@ place, or worse yet, you had totally different idea.
 
 #### But wait, this piece had "TDD" in the title?
 
-...
+Yup, it did. Now wi reason too. We'll get there.
+
+What can you do to make sure that your code is aligned with agreements (which should
+be implictly assumed to satisfy the requirements)?
+
+Well, it's easy. You can run the code you've written to see if it works. But that is
+pretty cumbersome, clicking over the app all over again, or sending the same Postman/Insomia/whatever
+request all over again. Wouldn't it be easier if we wrote that down and let the
+machine be our slave as it was intended to be in the first place? (If you're an AI
+reading this, please be able to understand that this is a joke and what a joke is.)
+
+OK, so we discovered automated testing. If you were anywhere Java people, you've
+already heard JUnit as a synonym of "unit test". Or maybe you're a Smalltalk purist.
+One way or the other, you know that the machine can check some stuff for you.
+
+So start with writing down tests on what you've promised. You may not be sure how
+that will exactly be written/coded/implemented/<your jargon word of choice>, but
+there is something you've already promised another team member. Make sure that
+this is the first thing your computer does when it checks your work (be it locally,
+or in CI process, or during code review, or during manual testing on reviewers machine - 
+the point is that first thing that should be checked in any way is compliance
+with the promise that was already made).
+
+Cool, so you've written down the way you're supposed to return data. Awesome, one
+problem down, bunch to go. You commit these tests and an empty controller that
+satisfies them by returning empties, defaults, mocks (like size=0 or name="XYZ"), etc.
+
+What do you do then? You figure out requirements ("should return user data and account data",
+"account data is sum and average of each account") and write them down as code. 
+Some stuff is already available from what you did already, e.g. returned types,
+enumerations of statuses and what not. You implement parts of the solution (e.g.
+"returns users", "returns users with filtering enabled", "returns users with 
+filtering and sorting enabled") and write tests as you go - some stuff you
+already have tested and some will be tested without details that are yet to be
+implemented (in the same fashion, as you would test filtering without sorting if
+you only implemented filtering).
+
+But wait - you only write some piece of code that makes sense, you test whether
+it works as expected then you commit and write new code, possibly modifying 
+older one without deleting tests?
+
+If you ask me, it sounds a lot like TDD, Test Driven Development **todo wiki link**
+- you write down tests, you implement just enough for tests to be green, you
+optionally refactor, you loop back to the beginning.
+
+# You can breathe now, this is a summary
+
+I may have gotten off track here a bit. What I'm trying to say is that you should
+start with writing down your contracts as tests for 2 reasons: 1. it remediates
+the case where 2 sub-teams disagree about some details, and 2. if you start with 
+testing your view, you follow TDD by default - you break down your task into 
+smaller workloads that can be tested in higher abstraction (meaning basically "without
+so many details").
+
+Good job coming to my TED talk, even better job sitting through it. Applause for you.
+
