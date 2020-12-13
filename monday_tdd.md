@@ -109,10 +109,17 @@ Swagger a.k.a. OpenAPI ***TODO LINK*** and Spring ***<cant recall name, fix this
 
 ## How could that be prevented? -- continued
 
-OK, so we can now assume that if something's agreed on, it is persisted and all
-the changed to that can be tracked. What's the next pitfall? A human mistake.
+OK, so we can now assume that if something's agreed on then it is persisted and 
+all the changes to it can be tracked. This covers most cases of loss of data (#1 
+in Monday morning example) and mischief (e.g. someone changing the stuff on 
+whiteboard over the weekend). It also allows for trackability (e.g. checking who
+and when decided that the agreement should change; you should be able to decide 
+whether a change was made in agreement between teams, or that someone decided that
+something will be easier for him, no matter the rest of the team.
 
-This can take 2 forms: something going unnoticed and someone working on wrong
+What's the next pitfall? A human mistake.
+
+These can take 2 forms: something going unnoticed and someone working on wrong
 assumptions. Let's do them in that order too.
 
 ### Unnoticed mistakes
@@ -122,8 +129,56 @@ Who's supposed to catch the mistakes of a code author?
 Obviously, a code reviewer. 
 
 We all make mistakes, that's what makes us human. We should expect that, and that's
-why each team should do code review. Issue of effective review is one that 
-deserves separate article and here I'll only focus on how to incorporate good
+why each team should do code review. Issue of an effective review is one that 
+deserves separate article, thus here I'll focus on how to incorporate good
 practices into already working code review process.
 
+Now, assuming that you do code review - you've become a reviewer. What is the
+actual ask here? "Check that this code is correct". Ugh, ambivalency... I hate
+it, don't you? It's the one thing that makes programming hard.
 
+What does it mean that the code is "correct"?
+
+As far as I can see, there are 2 main interpretations:
+
+a. The changes are aligned with "clear code" idea. In other words, that's a nice
+  code of sorts.
+
+b. The changes correctly implement the user requirements. In other words, product
+  is improved from users perspective.
+
+But now, who are you?
+
+If you are business person (business analyst, a manager, etc) you can easily judge
+against (b) option, but usually you won't be able to understand the code, the least **todo wat**
+judge it's quality.
+
+If you are a tech person, you may be able to judge both code quality and code
+compliance to requirements. That requires a lot of expertise and usually gives
+you a "senior" prefix in job title. "Mid" prefix means that while good at writing
+the code you're good on judging either (a) and (b), but "junior" tends to mean
+that you can write code that will be judged against both and usually fail one.
+
+Of course these are all huge simplifications and stereotypes of sorts. They 
+definitely do not describe the whole view accurately, but they are aligned with 
+the major share (at least in my feeling) of our day-to-day work.
+
+What I'm trying to say is that not many people can perform an appropriate code review.
+Usually you need to review the code against quality and against compliance. The
+first one should not focus on how the code is written, but rather on what it means.
+**That's the point where "username" issue could have been avoided** too - if a
+"business-perspective" reviewer had a chance to look at both codes on Friday, he 
+would have caught the issue (one of the codebases not aligned to the agreement)
+before it impacted anyone, not going anywhere near the end users (button that 
+works poorly is better than no button, but no button is better than button that
+doesn't work at all). 
+
+### Wrong assumptions
+
+This issue is tad harder and I'm gonna assume that we've already fixed unnoticed
+mistakes In this chapter we'll tackle the issue of code going for a "business" 
+review that will be negative. In other words, since we've made (reasonably) sure(ish)
+that if someone makes a mistake about the agreement then it will be caught during 
+the review. 
+
+...
