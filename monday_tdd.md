@@ -209,4 +209,25 @@ Or maybe you're on the other side, you just "lost". You may be on the fence, but
 that's easier - you've been at least somehow convinced that the other side had 
 better idea, so that's imprinted on you.
 
+But what if you have "lost" just because you needed to make a decision quick,
+so 3rd party (like code owner) had to step in? Or maybe you're just not that good
+with words that aren't code? If you still believe in your solution, and think that
+if you had more time or better convincing tools (like proof, that requires work time)
+you would have been right?
+
+That's another case where your inner instinct says something else than the decision
+that was made. In a similar way as in case of a "winner" that was sort of convinced,
+we tend to write down stuff we're subconciously **todo spellcheck*** focuesd on.
+Do you know that practical joke, where when someone spends a lot of time texting 
+around you, you just repeat a word like "giraffe" and he ends up with texting something
+like "I'll be giraffe on 5pm" while he clearly means "ready"? Yeah, so that's
+basically the same human fallacy **TODO SPELLCHECK**. 
+
+So, what's the solution here? Every time you try to smith the human words into
+code, make sure that you are up to date with all the agreements, not the assumptions
+about them. That especially matters when you weren't sure how to do it in the fiest
+place, or worse yet, you had totally different idea.
+
+#### But wait, this piece had "TDD" in the title?
+
 ...
