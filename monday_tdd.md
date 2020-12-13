@@ -1,12 +1,14 @@
-> Before we start - I'm a backend dev, I had my share of SCRUM mastering and tech
-> leading. Here I try to show a scenario that may happen in a software house or
-> a startup. "Username" feature is used as an example. While I ask you that while
-> there may be many alternative possible solutions for this scenario, I am not 
-> using examples of argumentations and excuses that I haven't heard before
-> (arranged for this scenario, of course), insults included (though I'm pretty
-> much freestyling in this case). To be honest, sometimes I'm paraphrasing myself.
+# TDD and Monday walk into a bar.
 
-# A Monday morning
+Before we start - I'm a backend dev, I had my share of SCRUM mastering and tech
+leading. Here I try to show a scenario that may happen in a software house or
+a startup. "Username" feature is used as an example. While I ask you that while
+there may be many alternative possible solutions for this scenario, I am not 
+using examples of argumentations and excuses that I haven't heard before
+(arranged for this scenario, of course), insults included (though I'm pretty
+much freestyling in this case). To be honest, sometimes I'm paraphrasing myself.
+
+## A Monday morning
 
 So, you come to the office on one Monday morning. It's Monday, people will try 
 to rip each others throats off. We all know the drill. You grab your mug from 
@@ -54,7 +56,7 @@ how it can go down from there:
   that they have their work finished, and yet one of them still have the stuff to
   do.
 
-# What happened?
+## What happened?
 
 A lot of things may have happened. There may have been a mischief (easy to do
 when your golden source of truth can be deleted with a sponge). There may have
@@ -78,4 +80,29 @@ won't deliver the feature as soon as they could. Why? Because of a nuissance...
 
 **Insert Piccard facepalm here**
 
+## How could that be prevented?
 
+Let's divide and conquer. First issue that is clearly visible is persistency of
+the agreement. 
+
+### Agreement persistency
+
+When you agree on something, **WRITE THAT DOWN**. Save that file
+and send it to the whole team. At least you have backup and a timestamp (you
+may want to change something later, so you need to recognize earlier and later
+agreements). Or better yet, save it on Confluence, it lets you version the 
+documents. Wait, document versioning? Let me tell you an anecdote.
+
+You know how I'm writing this piece? I'm doing Markup in a Notepad equivalent
+on my local machine. I've created a branch with name related to this texts title
+and I'm backing up my progress by commiting a simple text file.
+
+Write the agreement down in a simple TXT file and commit it (to a backend repo,
+frontend repo, dedicated documentation repo, whatever). It's even better if your
+agreement is on an API - there are production-ready tools to define the API that
+can later be also used in testing, API compliance validation, etc. To name a few,
+Swagger a.k.a. OpenAPI ***TODO LINK*** and Spring ***<cant recall name, fix this***.
+
+## How could that be prevented? -- continued
+
+...
