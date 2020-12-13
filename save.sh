@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -ex
+
 if [ -z "$1" ]
 then
 # after https://stackoverflow.com/a/6245587/1219585
