@@ -322,7 +322,7 @@ Gradually I've learned to focus on outermost unimplemented layer and, ironically
 that has made it easier to imagine the whole solution. It also led to experiences
 described in this text. 
 
-> **_T_ed:** And that, kids, is how I met usable _T_DD.
+> ***T*ed:** And that, kids, is how I met usable *T*DD.
 
 **todo the secret: if you start in outermost layer
 you have to test promises made in agreemnts, then you only have to test promises
