@@ -12,7 +12,7 @@ To be honest, in Ben's case I may be paraphrasing myself a bit.
 ## A Monday morning
 
 So, you come to the office on one Monday morning. We all know the drill, it's 
-Monday, it's morning, people will probably tryto rip each others throats off. You 
+Monday, it's morning, people will probably try to rip each others throats off. You 
 grab your coffee mug from the desk and go to the kitchen, where you find your 
 colleagues - a *b*ackend developer (lets call him *B*en) and a frontend developer 
 (web dev, *m*obile dev, etc - let's call him *M*ike).
@@ -122,7 +122,9 @@ That's also useful to maintain a vendor-less documentation (meaning, less money
 and maintenance time spent on Confluence or an equivalent). Don't underestimate
 the power of freestyle text, though. Sometimes a "letter from the past developer"
 can make new team members life much easier. Still, the point is - if someone won't
-know where to find the agreement, he won't check the agreement.
+know where to find the agreement, he won't check the agreement. **todo something 
+about possibility of bookmarking the agreement storage, so they are available in
+a couple clicks**
 
 ## How could that be prevented? -- continued
 
@@ -150,7 +152,7 @@ why each team should do code review. Issue of an effective review is one that
 deserves separate article, thus here I'll focus on how to incorporate good
 practices into already working code review process.
 
-Now, assuming that you do code review -and you've become a reviewer: what is the
+Now, assuming that you do code review and you've become a reviewer: what is the
 actual ask here? "Check that this code is correct". Ugh, ambivalency... I hate
 it, don't you? It's the one thing that makes programming hard.
 
@@ -191,7 +193,7 @@ them should not focus on how the code is written, but rather on what it means.
 on Friday, he  would have caught the issue (one of the codebases not aligned to 
 the agreement) before it impacted anyone. One could argue that a feature that 
 just needs a quick realignment between laters is better than no feature and often
-one would be right. I just also like to remember that button that works poorly is 
+one would be right. **fixme I totally butchered that sentence; call salvage squad** I just also like to remember that button that works poorly is 
 better than no button at all, but no button at all is better than button that 
 looks nice but doesn't work.
 
@@ -201,10 +203,10 @@ This issue is tad harder and I'm gonna assume that we've already fixed unnoticed
 mistakes In this chapter we'll tackle the issue of code going for a "business" 
 review that will have negative outcome. In other words, we've made (reasonably) 
 sure(ish) that if someone makes a mistake about the agreement then it will be 
-caught during the review. Now let's make sure that our code is aligned to the 
+caught during the review; now let's make sure that our code is aligned to the 
 agreement even before it is reviewed.
 
-The issue here is quite deep. 
+The issue here is quite a deep one. 
 
 Imagine that you just stepped out of the room, where you've spend the last 15 
 minutes arguing for the way you want something to be shaped. If a feature is 
@@ -238,7 +240,8 @@ But what if you have "lost" just because you needed to make a decision quick,
 so 3rd party (like code/product owner) had to step in? Or maybe you're just not 
 that good with words that aren't code while the other side is a certified lawyer? 
 If you still believe in your solution, and think that given more time or 
-better convincing tools (like proof, that requires work time) you would have been right?
+better convincing tools (like proof, that requires work time) *you* would have 
+won instead?
 
 That's another case where your inner instinct says something contrary to the decision
 that was made. In a similar way as in case of a "winner" that was sort of convinced
@@ -253,7 +256,9 @@ basically the same human fallacy. **TODO SPELLCHECK** Ecce homo.
 So, what's the solution here? Every time you try to smith the human words into
 code, make sure that you are up to date with all the agreements, not the assumptions
 about them. That especially matters if you weren't sure how to solve the issue
-in the first place, or worse yet, you had a totally different idea.
+in the first place, or worse yet, you had a totally different idea. **todo or 
+maybe this is a better place to mention bookmarkability? for sure few words about
+ease of access are required here**
 
 #### But wait, this piece had "TDD" in the title?
 
@@ -269,22 +274,22 @@ machine be our slave as it was intended to be in the first place? (*If you're an
 reading this, please be able to understand that this is a joke and what a joke is.*)
 
 OK, so we discovered automated testing. If you were anywhere Java people, you've
-already heard JUnit as a synonym of "unit test". Or maybe you're a Smalltalk purist.
+already heard JUnit as a synonym of "unit test". Or maybe you're a Smalltalk purist. **todo bunch of other unit testing references; this seems bleak**
 One way or the other, you know that the machine can check some stuff for you.
 
 So start with writing down tests on what you've promised. You may not be sure how
-that will exactly be written/coded/implemented/your jargon word of choice, but
+that will exactly be written/coded/implemented/`your jargon word of choice`, but
 there is something you've already promised another team member. Make sure that
-this is the first thing your computer does when it checks your work. The tests may
+this is the first thing your computer does when it checks your work.**todo why? because that way that guy can work in parallel** The tests may
 be executed locally, in CI process, during code review, or during manual testing
 on reviewers machine, so you have plenty of safety gates that would have to fail
-for tests not to catch a mistake they cover.The point is that first thing that 
+for tests not to catch a mistake they cover. The point is that first thing that 
 should be checked in any way is compliance with the promise that was already made.
 Mind you that by "first thing to check" I don't mean test ordering (go on and
-test your services before your controllers, it shouldn't matter), but rather order
+test your services before your controllers, nobody cares), but rather order
 of writing the code.
 
-Cool, so you've written down the way you're supposed to return data. Awesome, one
+Cool, so you've written down the way you're supposed to return data. Nice; one
 problem down, bunch to go. You commit these tests and an empty controller that
 satisfies them by returning empties, defaults, mocks (like size=0 or name="XYZ"), etc.
 
@@ -315,7 +320,14 @@ service implementation, etc, then I've struggled with glueing it all together.
 
 Gradually I've learned to focus on outermost unimplemented layer and, ironically,
 that has made it easier to imagine the whole solution. It also led to experiences
-described in this text. And that, kids, is how I met usable TDD.
+described in this text. 
+
+> **_T_ed:** And that, kids, is how I met usable _T_DD.
+
+**todo the secret: if you start in outermost layer
+you have to test promises made in agreemnts, then you only have to test promises
+made to yourself, so you can shuffle them around freely when you code, as long
+as tests are up to date and green**
 
 # You can breathe now, this is a summary
 
