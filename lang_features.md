@@ -56,7 +56,41 @@ to list some examples and their perspectives:
   them (is too resource consuming, it unstable, is poorly-written, e.g. pollutes
   filesystem to the limits of capacity, etc) then value of aforementioned stuff
   if decreasing with the amount of effort they need to put;
-  
+- business people, who has a very measurable value - money; in their case, value
+  of anything is drastically reduced when any other branches value is reduced;
+  if users are unhappy, there are no profits; if tech (operations/admins) people
+  lose value, then users will probably not be happy.
+
+> Ummm... OK, but what is the common element here?
+
+The feature in question is a common element. To measure it, I would take the 
+effect of developers work (lets call it "app"; it may be the mobile app you use,
+the docker image you spawn in your cloud, the JAR you execute on your VM, whatever
+your perspective is). Now, measure the value of the app (in your own terms and from
+your own perspective) running with the feature and without it. If you're a user,
+you may notice the difference in speed, quality of service, etc; if you're in 
+tech you wanna look at stability and quality (as in bug-freeness) of the app; if
+you're in business domain, you can just check your account. The change you notice
+is what I call a value of the feature.
+
+That leads us to a simple conclusion: the higher stability ("doesn't crash") **and**
+efficiency ("eats less RAM", "Uber is confirmed earlier"), the higher the value.
+Highlighted **and** isn't a formal logic conjunction - "business stability" 
+(meaning less bugs that make you loose money) is the most important, because
+you won't have a job (or a solution to your problem, if you're an user **todo I always say "a user"**) at all
+without it. Priorities when it comes to resource requirements (which grow a lot
+if you need to scale the app to keep up with non-business crashes) and efficiency
+("how fast do you get the results" - "how fast do I get the notification?", "how 
+quickly is HTTP request handled?", "how much RAM does it eat?") may differ
+according to your business - Uber can't allow for a request to be processed for 
+25 minutes, because you'll just get a taxi instead; if you're doing machine 
+learning you will probably prefer that your code runs for 101 hours and finishes
+without crashes over running it for *only* 100 hours and risking crash that would
+require you to repeat everything anew **todo anew?**.
+
+> I think I got the gist, but I think that you were talking about Java?
+
+
 
 > TODO at the end show a product owner perspective, which should be very much
 > parallel to JEP participants
