@@ -1,4 +1,4 @@
-# Tell me what you think about language feature and I'll tell you who you are
+# Tell me what you think about a language feature and I'll tell you who you are
 
 So, lately I was thinking that I really like the Java approach to adding new
 language features. By "language features" I mean stuff that would not compile
@@ -90,6 +90,9 @@ require you to repeat everything anew **todo anew?**.
 
 > I think I got the gist, but I think that you were talking about Java?
 
+WIP
+
+> note: http://openjdk.java.net/jeps/394
 
 
 > TODO at the end show a product owner perspective, which should be very much
