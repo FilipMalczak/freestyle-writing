@@ -29,15 +29,17 @@ In this story you're a drama addict, so you follow them to the room where there'
 a whiteboard that you use to write down your APIs and agreements. There's a bunch 
 of cases how it can go down from there:
 
-1. Someone erased the whiteboard over the weekend. In that case you have much 
-  worse problems than the ones I'm trying to remediate here. **todo possible typo**
-  You can pretty much be sure that if the feature was going to be ready before
-  now, it will definitely need some work.
-  **todo you have bigger problems, though using git would suffice...**
+1. Someone erased the whiteboard over the weekend. You can pretty much be sure 
+  that if the feature was thought to be ready before, it will definitely still 
+  need some work. There's no way to say who was right, which is yet another 
+  obstacle to figuring a proper course of action (but hey, let's see what other 
+  teams think; hopefully it will be one-vs-world, but if there will be two camps,
+  you should get here and keep reading).
+  **todo awkward phrasing**
 
 2. Whiteboard agrees with one of the guys. For the sake of example, let's say 
   that it was Ben that was right (backend team for life, baby!).
-  It  could be the other way round, though - the example will still work. 
+  It could be the other way round, though - the example will still work. 
   > **Mike:** That's not right! On Friday it said `firstName` and `lastName`!
   >
   > **Ben:** Go eat a massive bag of *****! It didn't!
@@ -99,32 +101,49 @@ When you agree on something, **WRITE THAT DOWN**. Save that file
 and send it to the whole team. At least you have backup and a timestamp (you
 may want to change something later, so you need to recognize earlier and later
 agreements). Or better yet, write it on Confluence, it lets you version the 
-documents. Wait, document versioning? Let me tell you an anecdote. **todo spelcheck**
+documents. Wait, document versioning? Let me tell you an anecdote from my life.
 
-You know how I'm writing this piece? I'm typing Markup in a Notepad equivalent
+You know how I'm writing this piece? I'm typing 
+[GitHub flavored](https://github.github.com/gfm/) 
+[Markdown](https://daringfireball.net/projects/markdown/) in a Notepad equivalent
 on my local machine. I have a GIT repo on Github, where I've created a branch 
 with name related to this texts title and I'm backing up my progress by 
 commiting a simple text file. I've asked some people to review it by submitting
 MR to myself and letting them comment.
 
+Don't overcomplicate the tooling though. If you keep everything in a heavily widgeted
+Confluence page that contains all the docs in a single document organized by collapsed
+boxes, tables, etc, you will probably get a very nice page, but it will load slowly
+and will be hard to maintain. Neither will people consult it (because page load
+time may be longer than their attention span), nor will the team maintain it
+properly (editing will be cumbersome, so it's gonna be tempting to say "screw that"
+ and not persist some requirement.
+
 Write the agreement down as text and commit it (to a backend repo,
-frontend repo, dedicated documentation repo, whatever). It's even better if your
-agreement is on an API - there are production-ready tools to define the API that
-can later be also used in testing, API compliance validation, etc. To name a few,
+frontend repo, dedicated documentation repo, whatever). If the topic of the discussion
+wat the API definition, then there are production-ready tools to put down the 
+definition in a form that can be rendered into web client (in many formats, HTML
+and language specific libraries to name most common) and then be used for 
+testing, compliance checks, etc. To name a few,
 [Swagger a.k.a. OpenAPI](https://swagger.io/) and 
 [Spring Cloud Contract](https://spring.io/projects/spring-cloud-contract).
 
-Make sure that everyone in the team knows where to find the agreement. It makes
+Make sure that everyone in the team knows where to find the agreement - if you 
+don't know where to find the guideline, you won't consult the guideline. It makes
 sense to keep API docs in backend repo, since its the backend that serves the API.
 Sometimes backend is decentralized, in which case you can either keep partial 
 APIs in related repositories, or you can have a dedicated repository for docs. 
 That's also useful to maintain a vendor-less documentation (meaning, less money 
 and maintenance time spent on Confluence or an equivalent). Don't underestimate
 the power of freestyle text, though. Sometimes a "letter from the past developer"
-can make new team members life much easier. Still, the point is - if someone won't
-know where to find the agreement, he won't check the agreement. **todo something 
-about possibility of bookmarking the agreement storage, so they are available in
-a couple clicks**
+can make new team members life much easier.
+
+Don't underestimate a prehistoric tool that is a web browser bookmark. My personal
+rule of thumb is that if I need an answer, it needs to be about 3 clicks and 1 
+intermediate page load away. Usually it goes something like: "specs" bookmark 
+folder -> project Confluence bookmark (this is the intermediate load) -> subpage 
+in pages tree. That is more of an enterprise setup - in development roles I probably
+keep 2 levels of bookmark folders and links to Swagger UIs.  
 
 ## How could that be prevented? -- continued
 
@@ -170,7 +189,7 @@ But now, who are you?
 
 **fixme analyst? analytic?**
 If you are business person (business analyst, a manager, etc) you can easily judge
-against (b) option, but usually you won't be able to understand the code, the least **todo wat**
+against (b) option (by running the modified version), but usually you won't be able to understand the code, the least **todo wat**
 judge it's quality.
 
 If you are a tech person, you may be able to judge both code quality and code
