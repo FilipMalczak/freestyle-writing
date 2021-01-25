@@ -187,10 +187,14 @@ b. The changes correctly implement the user requirements. In other words, produc
 
 But now, who are you?
 
-**fixme analyst? analytic?**
-If you are business person (business analyst, a manager, etc) you can easily judge
-against (b) option (by running the modified version), but usually you won't be able to understand the code, the least **todo wat**
-judge it's quality.
+If you are business person (business analyst, a manager, etc), then you probably
+understand the requirements and if somebody spins the modified product for you, 
+you can easily judge against (b) option. Unfortunately, you usually won't be able
+to read the code. If you will, that's great and you hopefully can judge 
+against (b) mostly by reading the code. Hopefully you'll be able to spin the 
+modified version on your own. Still, you probably won't be very programming-savyy
+and you may miss code quality issues; besides, low quality usually makes it harder to
+understand how implementation relates to requirements.
 
 If you are a tech person, you may be able to judge both code quality and code
 compliance to requirements. That requires a lot of expertise and usually gives
@@ -210,11 +214,14 @@ them should not focus on how the code is written, but rather on what it means.
 **That's the point where "username" issue could have been avoided** too - if a
 "business-perspective" reviewer had a chance to look at both code change sets 
 on Friday, he  would have caught the issue (one of the codebases not aligned to 
-the agreement) before it impacted anyone. One could argue that a feature that 
-just needs a quick realignment between laters is better than no feature and often
-one would be right. **fixme I totally butchered that sentence; call salvage squad** I just also like to remember that button that works poorly is 
-better than no button at all, but no button at all is better than button that 
-looks nice but doesn't work.
+the agreement) before it impacted anyone. 
+
+Some say that this isn't that bad of a situation - all you need to do is realign
+small pieces of code. Sure, world isn't ending. The thing is, issues like that
+can eat up big percentage of your capacity. If you can do your job by doing 20%
+less, why would you keep doing the overhead? Especially if that overhead is cause
+of frustration (and indirectly stress, intra-team tensions, mental exhaustion, 
+to name only a few).
 
 ### Wrong assumptions
 
@@ -244,11 +251,9 @@ the actual agreement.
 
 But maybe you were on the fence? It sorta landed on your side, but you're still
 not 100% sure. The next day you come to work and try to remember what you agreed
-on. There's a pretty big chance (sorry, no numbers; I know that by heart, by my
-own and people that I've worked with behaviour) **todo shitty phrasing; is the () 
-necessary at all?** that you've been working the alternative idea in your head
-and while you're still morning-fuzzy you'll assume that the other side "won". 
-A mistake is born.
+on. There's a pretty big chance that you've been working the alternative idea 
+in your head and while you're still morning-fuzzy you'll assume that the other 
+side "won". A mistake is born.
 
 Or maybe you're on the other side, you just "lost". You may be on the fence, but
 that's easier - you've been at least somehow convinced that the other side had 
@@ -264,20 +269,24 @@ won instead?
 
 That's another case where your inner instinct says something contrary to the decision
 that was made. In a similar way as in case of a "winner" that was sort of convinced
-by the other side, we tend to write down stuff we're subconciously **todo spellcheck*** focused on.
+by the other side, we tend to write down stuff we're subconsciously focused on.
 
 Do you know that practical joke, where when someone spends a lot of time texting 
 around you, you just repeat a word like "giraffe" and he ends up with texting something
 like "I'll be giraffe on 5pm" while he clearly means "ready"? Yeah, so that's
-basically the same human fallacy. **TODO SPELLCHECK** Ecce homo.
+basically the same human fallacy. Ecce homo.
 
-**fixme smith?**
-So, what's the solution here? Every time you try to smith the human words into
+So, what's the solution here? Every time you try to put the human words into
 code, make sure that you are up to date with all the agreements, not the assumptions
 about them. That especially matters if you weren't sure how to solve the issue
-in the first place, or worse yet, you had a totally different idea. **todo or 
-maybe this is a better place to mention bookmarkability? for sure few words about
-ease of access are required here**
+in the first place, or worse yet, you had a totally different idea.
+
+Fun fact: most of golden rules of programming (SOLID, KISS, etc **todo links, moar**)
+boil down to "keep your focus narrow and clearly define its boundaries". If you
+think bigger, concepts and tools like CI/CD, unit testing, SOA, REST, TDD, DDD, **todo links, moar? less?**
+do as well. If you have narrow focus, then it should be easy to keep all the 
+required agreements short while keeping them precise helps in keeping clear boundaries.
+But I'm getting ahead of myself.
 
 #### But wait, this piece had "TDD" in the title?
 
@@ -307,6 +316,9 @@ should be checked in any way is compliance with the promise that was already mad
 Mind you that by "first thing to check" I don't mean test ordering (go on and
 test your services before your controllers, nobody cares), but rather order
 of writing the code.
+
+> If you wonder how to make sure that your test suite is foolproof, read about
+> permutation testing. **todo link**
 
 Cool, so you've written down the way you're supposed to return data. Nice; one
 problem down, bunch to go. You commit these tests and an empty controller that
@@ -360,7 +372,7 @@ happen to goof teams.
 We understood that if you agree on something but won't make sure that both parties
 can re-read the terms at any point, we'll get into trouble. In afterthought, it 
 would be easier to understand were there financial contracts on the table, and 
-not intra-team agreements between colleagues **todo typo?**, wouldn't it?
+not intra-team agreements between colleagues, wouldn't it?
 
 We recognized that a person who could do both a technical and business code review
 would probably be able to juggle and play an instrument while reciting
